@@ -14,7 +14,7 @@ Gosto de projetos que vão além da métrica técnica e respondem à pergunta qu
 Modelo que identifica clientes com risco de cancelar e escolhe quem deve receber uma oferta de retenção para **maximizar o lucro**.
 - Lucro **31% maior** que a abordagem padrão e **~4x maior** que abordar clientes ao acaso
 - Encontra **84,5%** dos clientes que iriam cancelar
-- Pipeline sem vazamento de dados, 18 testes automatizados, CI com GitHub Actions e app interativo em Streamlit
+- Pipeline sem vazamento de dados, 18 testes automatizados, CI com GitHub Actions e [app interativo em Streamlit](https://previsao-churn-larissa.streamlit.app)
 
 `Python` `pandas` `scikit-learn` `XGBoost` `Streamlit` `pytest`
 
