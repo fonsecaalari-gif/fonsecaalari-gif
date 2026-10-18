@@ -1,33 +1,27 @@
-# Olá, eu sou Larissa Fonseca 👋
+# Larissa Fonseca
 
-### Estudante de Ciência de Dados apaixonada por transformar dados em decisões de negócio
+Estudante de Ciência de Dados na FIAP. Procuro estágio ou vaga júnior em Ciência de Dados, Análise de Dados ou Machine Learning.
 
-Curso **Ciência de Dados na FIAP** e procuro uma oportunidade de **estágio / júnior** em Ciência de Dados, Análise de Dados ou Machine Learning.
+Nos meus projetos, gosto de medir o resultado em dinheiro, além das métricas do modelo.
 
-Gosto de projetos que vão além da métrica técnica e respondem à pergunta que importa para a empresa: **quanto isso vale em dinheiro?**
+## Projeto
 
----
+[Previsão de churn de clientes](https://github.com/fonsecaalari-gif/previsao-churn-clientes)
 
-### 🚀 Projeto em destaque
+Modelo que indica quais clientes de uma operadora de telecom devem receber uma oferta de retenção. O limiar de decisão foi escolhido pelo lucro da campanha.
 
-#### [📉 Previsão de Churn de Clientes](https://github.com/fonsecaalari-gif/previsao-churn-clientes)
-Modelo que identifica clientes com risco de cancelar e escolhe quem deve receber uma oferta de retenção para **maximizar o lucro**.
-- Lucro **31% maior** que a abordagem padrão e **~4x maior** que abordar clientes ao acaso
-- Encontra **84,5%** dos clientes que iriam cancelar
-- Pipeline sem vazamento de dados, 18 testes automatizados, CI com GitHub Actions e [app interativo em Streamlit](https://previsao-churn-larissa.streamlit.app)
+- Lucro 31% maior que o do mesmo modelo com limiar padrão e quase 4 vezes o de abordar clientes ao acaso
+- Encontra 84,5% dos clientes que iriam cancelar
+- 18 testes automatizados, CI com GitHub Actions e [app online](https://previsao-churn-larissa.streamlit.app) em Streamlit
 
-`Python` `pandas` `scikit-learn` `XGBoost` `Streamlit` `pytest`
+Python, pandas, scikit-learn, XGBoost, Streamlit, pytest
 
----
+## Ferramentas
 
-### 🧰 Ferramentas
+- Linguagens: Python, SQL
+- Análise e Machine Learning: pandas, NumPy, scikit-learn, XGBoost, matplotlib
+- Outras: Streamlit, Git, GitHub Actions, pytest
 
-**Linguagens:** Python · SQL
-**Análise e ML:** pandas · NumPy · scikit-learn · XGBoost · matplotlib
-**Deploy e engenharia:** Streamlit · Git/GitHub · GitHub Actions · pytest
+## Contato
 
----
-
-### 📫 Contato
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/larissa-fonseca-179885170/)
+[LinkedIn](https://www.linkedin.com/in/larissa-fonseca-179885170/)
