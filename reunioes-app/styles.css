@@ -1,0 +1,98 @@
+:root{
+  --bg:#0b1220;
+  --card:#111c33;
+  --card2:#0f1930;
+  --line:#1e2c4a;
+  --text:#e5edf9;
+  --muted:#8fa3c8;
+  --accent:#38bdf8;
+  --danger:#f87171;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,system-ui,sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#14264d 0%,var(--bg) 55%) fixed;
+  color:var(--text);
+  min-height:100vh;
+  padding-bottom:calc(24px + env(safe-area-inset-bottom));
+}
+.topbar{max-width:1100px;margin:0 auto;padding:18px 16px 8px}
+.brand{display:flex;gap:12px;align-items:center}
+.brand h1{font-size:1.25rem;margin:0}
+.brand p{margin:2px 0 0;color:var(--muted);font-size:.82rem}
+.layout{max-width:1100px;margin:0 auto;padding:8px 16px;display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:960px){
+  .layout{grid-template-columns:1.05fr .95fr;align-items:start}
+  .brand h1{font-size:1.5rem}
+}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+.card h2{font-size:1rem;margin:0 0 10px;color:var(--accent)}
+.card h3{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 0 6px}
+
+.rec-top{display:flex;gap:16px;align-items:center}
+.rec-btn{
+  width:92px;height:92px;flex:0 0 92px;border-radius:50%;
+  border:4px solid var(--danger);background:#2a1215;cursor:pointer;
+  display:grid;place-items:center;
+  transition:transform .12s ease,box-shadow .2s;
+  touch-action:manipulation;
+}
+.rec-btn .rec-icon{width:34px;height:34px;border-radius:50%;background:var(--danger);display:block}
+.rec-btn.recording{animation:pulse 1.2s infinite;background:#3a1418}
+.rec-btn.recording .rec-icon{border-radius:8px;width:30px;height:30px}
+.rec-btn:active{transform:scale(.94)}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(248,113,113,.55)}
+  70%{box-shadow:0 0 0 18px rgba(248,113,113,0)}
+  100%{box-shadow:0 0 0 0 rgba(248,113,113,0)}
+}
+.rec-meta{display:flex;flex-direction:column;gap:6px;min-width:0}
+.timer-row{display:flex;align-items:center;gap:8px;font-variant-numeric:tabular-nums;font-size:1.6rem;font-weight:700}
+.dot{width:12px;height:12px;border-radius:50%;background:#475569;display:inline-block}
+.dot.on{background:var(--danger);animation:blink 1s infinite}
+@keyframes blink{50%{opacity:.35}}
+.status{color:var(--muted);font-size:.85rem}
+.lang-label{font-size:.78rem;color:var(--muted);display:flex;flex-direction:column;gap:4px;max-width:220px}
+select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:.9rem}
+.hint{color:var(--muted);font-size:.78rem;margin:12px 0 0}
+.warn{margin-top:10px;background:#3a2b12;border:1px solid #6b4f1d;color:#fcd34d;padding:10px 12px;border-radius:10px;font-size:.82rem}
+
+.transcript{
+  max-height:260px;overflow-y:auto;
+  background:var(--bg);border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;font-size:.92rem;line-height:1.5;
+}
+@media(min-width:960px){.transcript{max-height:430px}}
+.transcript p{margin:0 0 8px}
+.interim{color:var(--muted);font-style:italic;min-height:1.2em;margin:8px 2px 0;font-size:.88rem}
+.placeholder{color:var(--muted);font-style:italic}
+
+.notes-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.notes-actions{display:flex;gap:6px;flex-wrap:wrap}
+.chip{
+  background:#16264a;color:var(--text);border:1px solid var(--line);
+  border-radius:999px;padding:7px 12px;font-size:.8rem;cursor:pointer;
+  touch-action:manipulation;
+}
+.chip:hover{background:#1c3160}
+.chip.danger{color:#fca5a5;border-color:#5b2730}
+.chip.danger:hover{background:#3a1a20}
+.notes-list{margin:0;padding-left:18px;font-size:.9rem;line-height:1.55}
+.notes-list li{margin-bottom:4px}
+
+.meetings{display:flex;flex-direction:column;gap:10px}
+.meeting{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.meeting-info{display:flex;flex-direction:column;gap:2px;margin-bottom:8px}
+.meeting-info strong{font-size:.92rem;word-break:break-word}
+.meeting-info span{color:var(--muted);font-size:.78rem}
+.meeting-actions{display:flex;gap:6px;flex-wrap:wrap}
+
+.foot{max-width:1100px;margin:0 auto;padding:8px 16px 0;color:var(--muted);font-size:.75rem;text-align:center}
+button:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
