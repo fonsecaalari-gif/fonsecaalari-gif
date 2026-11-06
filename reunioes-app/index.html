@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1220">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Notas de Reunião — gravação e anotações automáticas</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="icon.svg" alt="" width="38" height="38">
+    <div>
+      <h1>Notas de Reunião</h1>
+      <p>Grave, transcreva e resuma — no celular ou no computador</p>
+    </div>
+  </div>
+</header>
+
+<main class="layout">
+  <section class="col">
+    <div class="card recorder-card">
+      <div class="rec-top">
+        <button id="btn-record" class="rec-btn" aria-label="Iniciar gravação"><span class="rec-icon"></span></button>
+        <div class="rec-meta">
+          <div class="timer-row"><span id="status-dot" class="dot"></span><span id="timer">00:00</span></div>
+          <span id="status-text" class="status">Pronto para gravar</span>
+          <label class="lang-label">Idioma da fala
+            <select id="lang">
+              <option value="pt-BR" selected>Português (BR)</option>
+              <option value="pt-PT">Português (PT)</option>
+              <option value="en-US">English (US)</option>
+              <option value="es-ES">Español</option>
+              <option value="fr-FR">Français</option>
+              <option value="de-DE">Deutsch</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      <p class="hint">Toque no botão para começar · no computador, Ctrl+Enter também inicia/para</p>
+      <div id="sr-warning" class="warn" hidden>Este navegador não tem transcrição de voz embutida — a gravação de áudio continua funcionando normalmente.</div>
+    </div>
+
+    <div class="card">
+      <h2>Transcrição ao vivo</h2>
+      <div id="live-transcript" class="transcript" aria-live="polite"><p class="placeholder">A transcrição aparece aqui enquanto você fala…</p></div>
+      <p id="interim-text" class="interim"></p>
+    </div>
+  </section>
+
+  <section class="col">
+    <div class="card">
+      <div class="notes-head">
+        <h2>Anotações automáticas</h2>
+        <div class="notes-actions">
+          <button id="btn-copy" class="chip">Copiar</button>
+          <button id="btn-md" class="chip">Baixar .md</button>
+          <button id="btn-share" class="chip">Compartilhar</button>
+        </div>
+      </div>
+      <h3>Resumo</h3>
+      <ul id="sum-list" class="notes-list"><li class="placeholder">Ainda sem conteúdo para resumir.</li></ul>
+      <h3>Tópicos</h3>
+      <ul id="topic-list" class="notes-list"><li class="placeholder">Os principais assuntos aparecem aqui.</li></ul>
+      <h3>Itens de ação</h3>
+      <ul id="action-list" class="notes-list"><li class="placeholder">Nenhum item de ação identificado ainda.</li></ul>
+    </div>
+
+    <div class="card">
+      <h2>Reuniões salvas</h2>
+      <div id="meetings-list" class="meetings"><p class="placeholder">Nenhuma reunião salva ainda.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>100% local: áudio e texto não saem do seu aparelho. No celular, instale como app em “Adicionar à tela inicial”.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
